@@ -94,7 +94,11 @@ class DataCollector:
         return df
 
     def parse_force(self):
+        """
+        Суть цієї функції = парсинг всього сайту по всіх районах
 
+        :return:  - датафрейм з усіма записами, а також результат записується в файл
+        """
         file_name = input("\nВи хочете почати примусовий парсинг в новий або існуючий файл\n"
               "введіть його ім'я: ")
 
@@ -110,6 +114,7 @@ class DataCollector:
             # if k == 5:
             #     break
 
+        # запис результату до файлу
         df.to_csv(file_name + '.csv', index=False)
 
         return df
@@ -135,6 +140,8 @@ def main():
 
     data_collector = DataCollector(districts, basic_url)
 
+    # ВЕСЬ РЕЗУЛЬТАТ РОБОТИ ДАНОГО БЛОКУ ВМІЩУЄТЬСЯ В ЦЕЙ РЯДОК
+    # В КІНЦІ ПАРСИНГУ МИ ОТРИМАЄМ ФАЙЛ З ДАНИМИ
     print(data_collector.parse_force())
 
     # df2 = pd.read_csv('data.csv')
