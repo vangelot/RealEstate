@@ -4,7 +4,7 @@ Educational project: real estate price forecast
 Ціль даного проекту - прогноз цін на вторинну нерухомість за заданими параметрами (кількість кімнат, район, площа і тд)
 
 Встановлений інтерпретатор 3.10
-В Корені проекту має бути файл data.csv та data_collector
+В Корені проекту має бути файл data.csv, data_collector та microDistricts.json
 
 Як працює проект:
 
